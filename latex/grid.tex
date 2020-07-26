@@ -12,25 +12,16 @@
 \usepackage{hyperref} % for http link
 \usepackage{lastpage} % show page/lastPage
 \usepackage{fancyhdr}
-\usepackage[top=2.5cm,bottom=1.5cm,left=2.5cm,right=1.5cm,headsep=1cm,footskip=0pt]{geometry}
+\usepackage[top=0.5cm,bottom=0.5cm,left=0.5cm,right=0.5cm,headsep=0.5cm,footskip=0.5pt]{geometry}
 
 %% Grid settings 
 % Number of A4 pages
 \newcommand\pages{1}
 % Style of inner grid: none/star/cross
-\newcommand\innerStyle{none}
+\newcommand\innerStyle{star}
 %% /Grid settings
 
-\pagestyle{fancy}
-
-% Header
-\lhead{Character sheet \,--\, empty boxes}
-\rhead{Hanzisheets}
-
-% Footer
-\lfoot{Created by \href{mailto:jan@vorisek.me?subject=Hanzisheets}{Jan Vorisek}}
-\cfoot{\thepage/\pageref{LastPage}}
-\rfoot{\url{https://hanzisheets.vorisek.me}}
+%\pagestyle{fancy}
 
 % Border under header and over footer
 \renewcommand{\headrulewidth}{0.4pt}
@@ -44,8 +35,8 @@
 \begin{document}
 	\centering%
 	% 21 rows and 15 columns = A4 paper
-	\foreach \m in {1,...,\the\numexpr\pages*23\relax}{%
-		\foreach \n in {1,...,17}{%
+	\foreach \m in {1,...,\the\numexpr\pages*16\relax}{%
+		\foreach \n in {1,...,12}{%
 			\hanzibox{}{inner=\innerStyle}%
 			\hspace{-0.4pt}%
 		}%
